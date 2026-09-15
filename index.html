@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Athena Zeng's portfolio — art, games, and interactive worlds."
+    />
+    <title>Athena Zeng — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Story+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/custom.css" />
+  </head>
+  <body data-view="home">
+    <header>
+      <a class="home" href="/" aria-label="Homepage">AZ<span> / homepage</span></a
+      ><a class="menu" href="/work/" aria-label="Work">work</a>
+    </header>
+    <main id="home">
+      <section class="composition" aria-label="Introduction">
+        <div class="intro panel">
+          <h1 class="decrypt-heading" aria-label="Hello, I'm Athena Zeng.">
+            <span class="decrypt-line" data-text="Hello, I'm" aria-hidden="true">Hello, I'm</span
+            ><br /><em class="decrypt-line decrypt-name" data-text="Athena Zeng." aria-hidden="true"
+              >Athena Zeng.</em
+            >
+          </h1>
+          <p class="sea-quote">“This is the great wave I have waited for all my life.”</p>
+        </div>
+        <aside class="quick panel">
+          <span class="eyebrow">A LITTLE ABOUT ME</span>
+          <p class="about-copy">
+            I’m currently a student at NYU. I explore installation art, graphic design, user
+            experience design, and game design.
+          </p>
+          <p class="about-copy">
+            In my free time, I enjoy digital painting, playing video games, and playing the guitar.
+          </p>
+        </aside>
+        <div class="net-panel panel">
+          <p class="net-hint">
+            <span class="asterisk" aria-hidden="true">✳</span> Click to explore. Drag to play.
+          </p>
+          <canvas
+            id="net"
+            aria-label="Interactive irregular blue fishing net with five photographic fish that move with the mesh. Move your pointer to ripple the mesh, or drag to pull it. Use the Work navigation link with a keyboard."
+          ></canvas>
+        </div>
+      </section>
+    </main>
+    <script src="/data/projects.js"></script>
+    <script src="/assets/js/fishing-net.js"></script>
+    <script src="/assets/js/portfolio.js"></script>
+  </body>
+</html>

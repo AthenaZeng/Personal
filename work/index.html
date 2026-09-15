@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Athena Zeng's portfolio — art, games, and interactive worlds."
+    />
+    <title>Athena Zeng — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/custom.css" />
+  </head>
+  <body data-view="work">
+    <header>
+      <a class="home" href="/" aria-label="Homepage">AZ<span> / homepage</span></a
+      ><a class="menu" href="/work/" aria-label="Work">work</a>
+    </header>
+    <main class="collection">
+      <div class="collection-heading">
+        <div>
+          <span class="eyebrow">ATHENA ZENG / SELECTED WORK</span>
+          <h1>A collection of curiosities.</h1>
+        </div>
+      </div>
+      <div class="domain-key" aria-label="Project disciplines">
+        <span style="--domain: #648cae">Installation & physical making</span
+        ><span style="--domain: #ad8196">Animation</span
+        ><span style="--domain: #639c94">Creative coding</span>
+      </div>
+      <div class="collection-net">
+        <canvas
+          id="net"
+          aria-label="Interactive fishing net with five projects. Use the labeled fish links to choose a project."
+        ></canvas>
+        <div id="fish-links"></div>
+      </div>
+    </main>
+    <script src="/data/projects.js"></script>
+    <script src="/assets/js/fishing-net.js"></script>
+    <script src="/assets/js/portfolio.js"></script>
+  </body>
+</html>

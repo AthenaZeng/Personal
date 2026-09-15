@@ -1,0 +1,1815 @@
+/* 页面样式。保留响应式条件及级联顺序。常用调整建议写入 custom.css。 */
+/* 页面样式。保留响应式条件及级联顺序。常用调整建议写入 custom.css。 */
+:root {
+  --blue: #648cae;
+  --line: #88a8c2;
+  --ink: #253e52;
+  --muted: #647887;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 35px;
+}
+body {
+  margin: 0;
+  background: #fdfefd;
+  color: var(--ink);
+  font-family: "Kanit", Arial, sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #284f76;
+  outline-offset: 5px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+.home,
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu > span:first-child {
+  font-size: 14px;
+  color: var(--muted);
+}
+.menu > span:last-child > span {
+  margin-left: 42px;
+}
+.composition {
+  position: relative;
+  margin: 74px 3.4vw 0;
+}
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #fdfefd;
+}
+.intro {
+  position: relative;
+  width: 59%;
+  padding: 34px 38px 38px;
+  min-height: 340px;
+}
+.eyebrow,
+.edition {
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  font-weight: 500;
+}
+.eyebrow {
+  color: var(--blue);
+}
+h1 {
+  font-size: clamp(45px, 5.1vw, 76px);
+  line-height: 1.1;
+  margin: 32px 0 21px;
+}
+h1 em {
+  font-style: normal;
+  color: var(--blue);
+}
+.intro p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+}
+.quick {
+  margin-top: 35px;
+  width: 33%;
+  padding: 29px 30px;
+}
+.quick > p {
+  font-family: "Kanit", Arial, sans-serif;
+  font-size: 25px;
+  line-height: 1.35;
+  margin: 23px 0 27px;
+}
+.quick dl {
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+.quick dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid #e5ecf1;
+}
+dt {
+  color: var(--muted);
+}
+dd {
+  margin: 0;
+  text-align: right;
+}
+.quick a {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.net-panel {
+  position: absolute;
+  right: 0;
+  top: 65px;
+  width: 55.5%;
+  height: 620px;
+}
+.net-top,
+.net-bottom {
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
+}
+.edition {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+.net-bottom {
+  font-size: 12px;
+  color: var(--muted);
+}
+.asterisk {
+  color: var(--blue);
+  font-size: 24px;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+button {
+  pointer-events: auto;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  padding: 8px 0;
+  cursor: pointer;
+  font-size: 12px;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+  cursor: grab;
+}
+canvas:active {
+  cursor: grabbing;
+}
+.side-note {
+  position: absolute;
+  right: 1px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.work {
+  margin: 0 3.4vw 100px;
+}
+.section-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 25px;
+}
+.section-title h2 {
+  font-family: "Kanit", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  margin: 0;
+}
+.section-title > span {
+  color: var(--muted);
+  font-size: 14px;
+}
+.work-list article {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px solid #dce5ec;
+}
+.work-list article > span:first-child {
+  color: var(--blue);
+  font-size: 12px;
+}
+h3 {
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+.work-list p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+.tag {
+  margin-left: auto;
+  font-size: 10px;
+  letter-spacing: 1px;
+  border: 1px solid #cfdee9;
+  border-radius: 30px;
+  padding: 9px 13px;
+}
+.work-note {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 23px;
+}
+footer {
+  border-top: 1px solid var(--line);
+  margin: 0 3.4vw;
+  padding: 25px 0 32px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--muted);
+}
+@media (min-width: 1500px) {
+  header,
+  main,
+  footer {
+    max-width: 1450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 1000px) {
+  .edition {
+    display: none;
+  }
+  .quick {
+    width: 39%;
+    padding: 24px;
+  }
+  .intro {
+    width: 65%;
+  }
+  .net-panel {
+    width: 55%;
+    height: 570px;
+    top: 100px;
+  }
+  .net-bottom {
+    left: 18px;
+    right: 18px;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  h1 {
+    font-size: 53px;
+  }
+}
+@media (max-width: 650px) {
+  .home,
+  .menu {
+    padding: 0 15px;
+  }
+  .menu {
+    width: 43%;
+  }
+  .menu > span:last-child > span {
+    margin-left: 10px;
+  }
+  .composition {
+    margin: 42px 20px 65px;
+    display: flex;
+    flex-direction: column;
+  }
+  .intro {
+    width: 100%;
+    min-height: 0;
+    padding: 27px;
+  }
+  .intro h1 {
+    font-size: 52px;
+    letter-spacing: -2px;
+    margin-top: 24px;
+  }
+  .intro p {
+    font-size: 16px;
+  }
+  .net-panel {
+    position: relative;
+    width: 100%;
+    height: 470px;
+    top: auto;
+    order: 2;
+  }
+  .quick {
+    width: 100%;
+    margin: 0;
+    order: 3;
+  }
+  .quick > p {
+    margin: 18px 0;
+  }
+  .side-note {
+    display: none;
+  }
+  .work {
+    margin: 0 20px 60px;
+  }
+  .section-title {
+    display: block;
+  }
+  .section-title h2 {
+    font-size: 29px;
+    margin-bottom: 12px;
+  }
+  .work-list article {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    margin-left: 30px;
+  }
+  .work-list h3 {
+    font-size: 22px;
+  }
+  footer {
+    margin: 0 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  footer > span:nth-child(2) {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+/* The supplied fish photograph and the mesh share one continuous surface. */
+.net-top,
+.net-bottom {
+  background: rgba(245, 245, 245, 0.94);
+  border-radius: 8px;
+  padding: 5px 0;
+}
+
+/* Open suspended net: the canvas extends beyond its former frame. */
+.net-panel {
+  border: 0;
+  background: transparent;
+  overflow: visible;
+  isolation: isolate;
+  pointer-events: none;
+}
+#net {
+  position: absolute;
+  left: -15%;
+  top: -11%;
+  width: 115%;
+  height: 124%;
+  max-width: none;
+  pointer-events: auto;
+  mix-blend-mode: multiply;
+}
+.net-top {
+  top: -25px;
+  background: transparent;
+}
+.net-bottom {
+  bottom: -50px;
+  background: transparent;
+}
+.side-note {
+  top: 770px;
+}
+.composition {
+  min-height: 875px;
+}
+h1 {
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+.quick > p,
+.section-title h2 {
+  font-weight: 300;
+}
+@media (max-width: 1000px) {
+  .composition {
+    min-height: 830px;
+  }
+  .side-note {
+    top: 760px;
+  }
+}
+@media (max-width: 650px) {
+  .composition {
+    min-height: 0;
+    gap: 34px;
+  }
+  .net-panel {
+    margin: 38px 0 70px;
+  }
+  #net {
+    left: -5%;
+    width: 110%;
+    top: -10%;
+    height: 120%;
+  }
+  .net-bottom {
+    bottom: -40px;
+  }
+  .net-top {
+    top: -30px;
+  }
+}
+.net-enter {
+  position: absolute;
+  right: 20px;
+  bottom: -82px;
+  pointer-events: auto;
+  color: var(--blue);
+  border-bottom: 1px solid var(--line);
+  padding: 8px 0;
+  font-size: 16px;
+  z-index: 3;
+}
+.collection-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.collection-heading h1 {
+  font-size: 38px;
+  letter-spacing: -1px;
+  margin: 12px 0;
+}
+.collection-heading p {
+  color: var(--muted);
+  font-size: 16px;
+}
+.domain-key {
+  display: flex;
+  gap: 25px;
+  margin: 15px 0;
+  font-size: 14px;
+}
+.domain-key > span:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 3px;
+  background: var(--domain);
+  vertical-align: middle;
+  margin-right: 9px;
+}
+.collection-net {
+  position: relative;
+  width: min(1080px, 100%);
+  height: min(73vw, 760px);
+  min-height: 490px;
+  margin: -55px auto 0;
+}
+.collection-net #net {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.collection-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--muted);
+  padding: 10px 0 25px;
+}
+.fish-project-link {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 65px;
+  z-index: 3;
+  color: var(--domain);
+  text-align: center;
+  pointer-events: none;
+}
+.fish-hit {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: rotate(var(--fish-angle));
+  pointer-events: auto;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.fish-label {
+  display: block;
+  width: max-content;
+  max-width: 220px;
+  margin: 5px auto;
+  background: rgba(253, 254, 253, 0.9);
+  padding: 4px 10px;
+  border-left: 2px solid var(--domain);
+  font-size: 15px;
+  pointer-events: auto;
+  text-align: left;
+}
+.fish-label small {
+  display: block;
+  font-size: 11px;
+}
+.fish-project-link:hover .fish-label,
+.fish-project-link:focus-visible .fish-label {
+  background: var(--domain);
+  color: white;
+}
+.fish-project-link:focus-visible {
+  outline: 2px solid var(--domain);
+}
+body[data-view="detail"] {
+  overflow: hidden;
+}
+.project-screen {
+  display: grid;
+  grid-template-columns: 39% 61%;
+  position: relative;
+  overflow: hidden;
+}
+.catch-rail {
+  position: relative;
+  padding: 14px 25px 30px 4vw;
+  overflow-y: auto;
+}
+.back-collection {
+  font-size: 14px;
+  position: relative;
+  z-index: 3;
+}
+.rail-caption {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  margin-top: 20px;
+}
+#catch-list {
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+.catch-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 65px;
+  flex: 1;
+  max-height: 140px;
+  transition:
+    opacity 0.35s,
+    transform 0.35s;
+}
+.catch-item.selected {
+  flex: 1.6;
+}
+.catch-item:hover {
+  opacity: 0.85;
+}
+.fish-crop {
+  display: block;
+  width: 80%;
+  aspect-ratio: 355 / var(--source-height);
+  position: relative;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+.fish-crop img {
+  position: absolute;
+  width: calc(100% * 369 / 355);
+  max-width: none;
+  height: auto;
+  left: calc(-100% * 7 / 355);
+  top: calc(-100% * var(--source-y) / var(--source-height));
+  filter: url(#fish-silhouette);
+}
+.selected .fish-crop img {
+  filter: none;
+}
+.catch-name {
+  position: absolute;
+  left: 12px;
+  bottom: 0;
+  font-size: 13px;
+  letter-spacing: 1px;
+  background: rgba(253, 254, 253, 0.85);
+  padding: 2px 8px;
+}
+.catch-name small {
+  display: none;
+  font-size: 11px;
+  letter-spacing: 0;
+}
+.selected .catch-name {
+  color: var(--project-color);
+  bottom: -7px;
+}
+.selected .catch-name small {
+  display: block;
+}
+.project-orbit {
+  position: relative;
+  overflow: hidden;
+  touch-action: none;
+  outline-offset: -5px;
+}
+.orbit-line {
+  position: absolute;
+  top: -30%;
+  height: 165%;
+  border: 2px solid var(--project-color);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.project-top {
+  position: absolute;
+  left: 9%;
+  right: 5%;
+  top: 15px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--project-color);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  z-index: 4;
+}
+.orbit-card {
+  position: absolute;
+  top: 50%;
+  overflow-y: auto;
+  transform: translate(calc(var(--curve) * 65px), calc(-50% + var(--offset) * 520px))
+    rotate(calc(var(--offset) * 13deg));
+  transform-origin: -250px center;
+  opacity: 0.18;
+  transition:
+    transform 0.55s cubic-bezier(0.2, 0.75, 0.2, 1),
+    opacity 0.45s;
+  pointer-events: none;
+}
+.orbit-card.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+}
+.orbit-card h1 {
+  font-size: clamp(28px, 3.5vw, 52px);
+  color: var(--project-color);
+  letter-spacing: -1px;
+}
+.orbit-card p {
+  font-weight: 300;
+  max-width: 44ch;
+}
+.project-image-slot {
+  height: clamp(120px, 24vh, 260px);
+  border: 1px dashed var(--line);
+  background: #edf2f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: var(--muted);
+}
+.project-image-slot > span {
+  font-size: 22px;
+  font-weight: 300;
+}
+.project-image-slot > small {
+  font-size: 13px;
+}
+.project-facts {
+  margin: 25px 0;
+}
+.project-facts > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #dce5ec;
+}
+.orbit-controls {
+  position: absolute;
+  bottom: 16px;
+  right: 10%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  z-index: 5;
+  background: #fdfefd;
+  padding: 5px;
+}
+.orbit-controls button {
+  font-size: 22px;
+  padding: 4px 12px;
+}
+.orbit-controls button:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+.orbit-controls > span:last-child {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 12px;
+}
+#section-count {
+  font-size: 14px;
+  color: var(--project-color);
+}
+@media (max-width: 650px) {
+  .collection-heading {
+    display: block;
+  }
+  .collection-heading h1 {
+    font-size: 29px;
+  }
+  .domain-key {
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+  .collection-net {
+    margin: -20px auto 0;
+    min-height: 490px;
+    width: 100%;
+  }
+  .fish-label {
+    font-size: 12px;
+    max-width: 130px;
+  }
+  .collection-foot > span:last-child {
+    display: none;
+  }
+  .project-screen {
+    grid-template-columns: 29% 71%;
+  }
+  .catch-rail {
+    padding: 10px 6px;
+  }
+  .back-collection {
+    font-size: 11px;
+  }
+  .rail-caption {
+    display: none;
+  }
+  #catch-list {
+    min-height: 420px;
+  }
+  .fish-crop {
+    width: 100%;
+    transform: rotate(-55deg) scale(1.25);
+    overflow: hidden;
+  }
+  .catch-name {
+    left: 0;
+    font-size: 10px;
+    bottom: 9px;
+    padding: 2px;
+  }
+  .catch-name small {
+    display: none !important;
+  }
+  .selected .catch-name {
+    bottom: 0;
+  }
+  .project-top {
+    font-size: 9px;
+    letter-spacing: 0.6px;
+    left: 7%;
+    right: 5%;
+  }
+  .orbit-card {
+    transform: translate(calc(var(--curve) * 35px), calc(-50% + var(--offset) * 500px))
+      rotate(calc(var(--offset) * 12deg));
+  }
+  .orbit-controls {
+    right: 3%;
+    gap: 7px;
+  }
+  .orbit-controls > span:last-child {
+    font-size: 10px;
+  }
+  .project-image-slot > small {
+    font-size: 11px;
+    text-align: center;
+  }
+  .project-facts {
+    font-size: 13px;
+  }
+  .net-enter {
+    bottom: -75px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .orbit-card,
+  .catch-item {
+    transition: none;
+  }
+}
+/* A curved school of fish, all facing the information on the right. */
+.catch-rail {
+  border-right: 0;
+  padding-right: 0;
+}
+#catch-list {
+  position: absolute;
+  inset: 55px 0 45px;
+  height: auto;
+  min-height: 0;
+  display: block;
+}
+.catch-item,
+.catch-item.selected {
+  position: absolute;
+  left: calc(4% - var(--catch-curve) * 3%);
+  top: calc(50% + var(--catch-offset) * 19%);
+  width: 94%;
+  height: 100px;
+  min-height: 0;
+  max-height: none;
+  display: flex;
+  transform: translateY(-50%) scale(0.7);
+  transform-origin: right center;
+  opacity: 0.34;
+}
+.catch-item.selected {
+  z-index: 2;
+}
+.catch-item .fish-crop {
+  width: 93%;
+  transform: scaleX(var(--fish-facing));
+  flex-shrink: 0;
+}
+.catch-item.selected .catch-name {
+  bottom: -24px;
+  font-size: 16px;
+  left: 13%;
+}
+.catch-item.selected .catch-name small {
+  font-size: 12px;
+}
+.catch-item:focus-visible {
+  opacity: 1;
+  outline: 2px solid var(--project-color);
+  outline-offset: 8px;
+}
+.rail-caption {
+  position: absolute;
+  bottom: 14px;
+  left: 4vw;
+}
+/* The card is a curved, tapered quadrilateral rather than a rounded rectangle. */
+.orbit-card {
+  left: 3%;
+  width: 94%;
+  max-height: none;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+}
+.card-shape {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+.card-shape path {
+  vector-effect: non-scaling-stroke;
+}
+.card-content {
+  position: absolute;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 4px 8px 8px 0;
+}
+.orbit-card h1 {
+  margin: 8px 0 16px;
+}
+.orbit-card p {
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 14px 0 0;
+}
+.orbit-card .project-image-slot {
+  height: clamp(105px, 20vh, 190px);
+}
+.orbit-controls {
+  left: 20%;
+}
+.orbit-line {
+  left: -44%;
+  width: 112%;
+}
+@media (max-width: 650px) {
+  #catch-list {
+    inset: 45px 0 40px;
+  }
+  .catch-item,
+  .catch-item.selected {
+    height: 70px;
+    left: calc(1% - var(--catch-curve) * 2%);
+    width: 98%;
+  }
+  .catch-item .fish-crop {
+    transform: scaleX(var(--fish-facing));
+    width: 100%;
+  }
+  .catch-item.selected .catch-name {
+    left: 3%;
+    bottom: -12px;
+    font-size: 11px;
+  }
+  .orbit-card {
+    left: 0;
+    width: 99%;
+    padding: 0;
+  }
+  .card-content {
+    padding-right: 3px;
+  }
+  .orbit-card h1 {
+    font-size: 26px;
+  }
+  .orbit-card p {
+    font-size: 14px;
+  }
+  .orbit-card .project-image-slot {
+    height: 140px;
+  }
+  .project-image-slot > span {
+    font-size: 18px;
+  }
+  .orbit-controls {
+    left: 10%;
+  }
+}
+@media (max-height: 600px) {
+  .card-content {
+    top: 15%;
+    bottom: 13%;
+  }
+  .catch-item,
+  .catch-item.selected {
+    height: 65px;
+  }
+  .catch-item.selected .catch-name {
+    bottom: -12px;
+  }
+  .orbit-card .project-image-slot {
+    height: 105px;
+  }
+}
+/* Keep the photograph's color, with the light source background masked out. */
+.catch-item.selected .fish-crop img {
+  filter: url(#fish-cutout);
+}
+.catch-item.selected .fish-crop {
+  mix-blend-mode: normal;
+}
+.catch-name {
+  display: none !important;
+}
+.card-shape path {
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+@media (max-width: 650px) {
+}
+/* Recess the inactive catches; project the selected catch toward the content. */
+.catch-item {
+  left: calc(-12% - var(--catch-curve) * 2%);
+  transform: translateY(-50%) scale(0.62);
+  transform-origin: left center;
+  opacity: 0.4;
+}
+.catch-item.selected {
+  left: 10%;
+  width: 100%;
+  transform: translateY(-50%) scale(1.24);
+  transform-origin: right center;
+  opacity: 1;
+}
+.catch-item .catch-name {
+  display: block !important;
+  left: 10%;
+  bottom: -13px;
+  background: transparent;
+  color: var(--blue);
+  font-size: 14px;
+}
+.catch-item .catch-name small {
+  display: none !important;
+}
+.catch-rail {
+  overflow: visible;
+  z-index: 3;
+  pointer-events: none;
+}
+.catch-rail a {
+  pointer-events: auto;
+}
+.catch-item.selected .fish-crop {
+  overflow: hidden;
+}
+.project-orbit {
+  isolation: isolate;
+}
+.project-orbit::before {
+  content: "";
+  position: absolute;
+  inset: 12% 4% 13% 0;
+  background:
+    radial-gradient(ellipse at 70% 22%, rgba(134, 223, 210, 0.25), transparent 57%),
+    radial-gradient(ellipse at 30% 76%, rgba(142, 203, 222, 0.2), transparent 54%);
+  pointer-events: none;
+  z-index: -1;
+}
+.card-frost {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(
+    14.5% 11.7%,
+    28% 8.3%,
+    48% 5.8%,
+    70% 4.8%,
+    91% 5.1%,
+    94.2% 9.1%,
+    96% 25%,
+    97% 50%,
+    96% 75%,
+    94.2% 90.9%,
+    91% 94.9%,
+    70% 95.2%,
+    48% 94.2%,
+    28% 91.7%,
+    14.5% 88.3%,
+    12.5% 83.6%,
+    14% 67%,
+    14.4% 50%,
+    14% 33%,
+    12.5% 16.4%
+  );
+  backdrop-filter: blur(18px) saturate(135%);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
+  background: linear-gradient(130deg, rgba(228, 255, 250, 0.18), rgba(138, 210, 214, 0.12));
+  pointer-events: none;
+}
+.card-shape path {
+  stroke-width: 1.25;
+}
+.card-content .project-image-slot {
+  border-color: rgba(97, 168, 172, 0.45);
+}
+.orbit-card .eyebrow {
+  color: #5a9695;
+}
+@media (max-width: 650px) {
+  .catch-item {
+    left: calc(-8% - var(--catch-curve) * 2%);
+    transform: translateY(-50%) scale(0.67);
+  }
+  .catch-item.selected {
+    left: 6%;
+    width: 100%;
+    transform: translateY(-50%) scale(1.16);
+  }
+  .catch-item .catch-name {
+    font-size: 11px;
+    left: 6%;
+    bottom: -5px;
+  }
+  .catch-item.selected .catch-name {
+    display: none !important;
+  }
+}
+/* Labels follow the mouth, rather than the lower edge of the fish. */
+.catch-item:not(.selected) .catch-name {
+  left: 96%;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  width: max-content;
+  white-space: nowrap;
+  font-size: 17px;
+  line-height: 1.2;
+  padding: 0 0 0 8px;
+  letter-spacing: 0.4px;
+  background: transparent;
+}
+.catch-item.selected .catch-name {
+  display: none !important;
+}
+/* Tint only the exact SVG outline. No surrounding glow or rectangular wash. */
+.project-orbit::before {
+  display: none;
+}
+.card-frost {
+  display: none;
+}
+.card-shape {
+  filter: none;
+}
+.card-shape path {
+  fill: rgba(164, 224, 214, 0.2);
+  stroke: rgba(100, 168, 171, 0.7);
+}
+.card-content .project-image-slot {
+  background: rgba(226, 248, 244, 0.2);
+}
+@media (max-width: 650px) {
+  .catch-item:not(.selected) .catch-name {
+    left: 94%;
+    font-size: 13px;
+    padding-left: 3px;
+    letter-spacing: 0;
+  }
+}
+/* A consistent image stage preserves both portrait and landscape compositions. */
+.project-photo {
+  margin: 0;
+  width: 100%;
+}
+.project-photo img {
+  display: block;
+  width: 100%;
+  height: clamp(140px, 25vh, 240px);
+  object-fit: contain;
+  object-position: center;
+  background: rgba(236, 250, 247, 0.16);
+  border-radius: 5px;
+}
+.project-photo figcaption {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--muted);
+  margin-top: 8px;
+}
+.card-content:has(.project-photo) > p:empty {
+  display: none;
+}
+@media (max-width: 650px) {
+  .project-photo img {
+    height: clamp(145px, 25vh, 215px);
+  }
+  .project-photo figcaption {
+    font-size: 11px;
+  }
+}
+/* One shared alignment for navigation and the collection introduction. */
+header {
+  width: auto;
+  max-width: none;
+  margin: 28px 5.2vw;
+}
+.home,
+.menu {
+  border: 0;
+  border-radius: 0;
+  background: none;
+  padding: 0;
+  min-height: 64px;
+  font-weight: 600;
+}
+.home {
+  font-size: 42px;
+  letter-spacing: -1.5px;
+}
+.home span {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-left: 22px;
+}
+.menu {
+  width: auto;
+  gap: 28px;
+  font-size: 38px;
+  justify-content: flex-end;
+  letter-spacing: -0.5px;
+}
+.menu > span,
+.menu > span:first-child {
+  font-size: 38px;
+  font-weight: 600;
+  color: inherit;
+}
+.home:hover,
+.menu:hover {
+  color: var(--blue);
+}
+.collection {
+  margin: 45px 5.2vw 0;
+  padding-bottom: 35px;
+}
+.collection-heading h1 {
+  margin-left: 0;
+}
+.domain-key {
+  margin-left: 0;
+}
+@media (max-width: 650px) {
+  header {
+    margin: 20px;
+  }
+  .home,
+  .menu {
+    min-height: 48px;
+  }
+  .home {
+    font-size: 31px;
+  }
+  .home span {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  .menu {
+    font-size: 28px;
+    gap: 12px;
+  }
+  .menu > span,
+  .menu > span:first-child {
+    font-size: 28px;
+  }
+  .collection {
+    margin: 35px 20px 0;
+  }
+}
+/* Image-led project cards with an unobtrusive continuous orbit. */
+.orbit-line {
+  opacity: 0.15;
+  border-width: 1px;
+}
+.project-screen {
+  height: calc(100dvh - 115px);
+}
+.orbit-card {
+  height: calc(100dvh - 180px);
+  min-height: 300px;
+}
+.card-content {
+  left: 18%;
+  right: 8%;
+  top: 12%;
+  bottom: 12%;
+  scrollbar-width: none;
+}
+.card-content::-webkit-scrollbar {
+  display: none;
+}
+.image-card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+}
+.image-card .card-content > .eyebrow {
+  font-size: 11px;
+  flex: none;
+}
+.image-card h1 {
+  font-size: clamp(23px, 2.3vw, 34px);
+  margin: 0;
+  line-height: 1.2;
+  flex: none;
+}
+.image-card .project-photo {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.image-card .project-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  flex: 1;
+  object-fit: contain;
+  background: transparent;
+}
+.image-card .project-photo figcaption {
+  font-size: 11px;
+  margin-top: 5px;
+  flex: none;
+}
+.image-card .card-content > p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  flex: none;
+}
+#project-number {
+  letter-spacing: 0.3px;
+  font-size: 14px;
+}
+@media (max-width: 650px) {
+  .project-screen {
+    height: calc(100dvh - 90px);
+  }
+  .orbit-card {
+    height: calc(100dvh - 145px);
+    min-height: 280px;
+  }
+  .card-content {
+    left: 18%;
+    right: 8%;
+    top: 13%;
+    bottom: 13%;
+  }
+  .image-card h1 {
+    font-size: 23px;
+  }
+  #project-number {
+    font-size: 11px;
+  }
+  .image-card .card-content > p {
+    font-size: 12px;
+  }
+}
+@media (max-height: 600px) {
+  .orbit-card {
+    height: calc(100dvh - 130px);
+    min-height: 210px;
+  }
+  .image-card h1 {
+    font-size: 21px;
+  }
+  .image-card .card-content > p {
+    display: none;
+  }
+}
+/* Script greeting with staggered top and bottom mechanical flaps. */
+.intro .flap-heading {
+  font-family: "Story Script", cursive;
+  font-weight: 400;
+  font-size: clamp(52px, 5.5vw, 82px);
+  letter-spacing: 0;
+  line-height: 1.25;
+  margin-top: 20px;
+}
+.flap-line {
+  white-space: nowrap;
+}
+.flap-word {
+  display: inline-block;
+  position: relative;
+  perspective: 700px;
+  vertical-align: baseline;
+  white-space: pre;
+}
+.flap-space {
+  visibility: hidden;
+}
+.flap-half {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  transform-origin: center 50%;
+  white-space: pre;
+}
+.flap-top {
+  clip-path: inset(0 -15% 50% -15%);
+}
+.flap-bottom {
+  clip-path: inset(50% -15% 0 -15%);
+}
+.flapping .flap-top {
+  animation: flapUpper 0.58s cubic-bezier(0.2, 0.65, 0.3, 1) both;
+  animation-delay: var(--delay);
+}
+.flapping .flap-bottom {
+  animation: flapLower 0.68s cubic-bezier(0.2, 0.65, 0.3, 1) both;
+  animation-delay: calc(var(--delay) + 110ms);
+}
+@keyframes flapUpper {
+  0% {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+@keyframes flapLower {
+  0% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  78% {
+    transform: rotateX(9deg);
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+body[data-view="home"] .net-enter {
+  top: -38px;
+  right: 10px;
+  bottom: auto;
+  font-size: 15px;
+  border: 0;
+  padding: 8px 0;
+  z-index: 4;
+}
+@media (max-width: 1000px) {
+  .intro .flap-heading {
+    font-size: 57px;
+  }
+}
+@media (max-width: 650px) {
+  .intro .flap-heading {
+    font-size: clamp(43px, 9vw, 57px);
+  }
+  body[data-view="home"] .net-enter {
+    top: -30px;
+    right: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flapping .flap-half {
+    animation: none;
+  }
+}
+/* Stable two-line script layout during the character-decoding reveal. */
+.intro .decrypt-heading {
+  font-family: "Story Script", cursive;
+  font-weight: 400;
+  font-size: clamp(45px, 4.3vw, 66px);
+  line-height: 1.15;
+  letter-spacing: 0;
+  margin: 18px 0 52px;
+}
+.decrypt-line {
+  display: inline-block;
+  white-space: nowrap;
+  min-height: 1.15em;
+}
+.intro .decrypt-name {
+  font-size: 1.34em;
+  font-style: normal;
+  color: var(--blue);
+  margin-top: 10px;
+}
+.net-hint {
+  position: absolute;
+  top: -42px;
+  right: 10px;
+  margin: 0;
+  z-index: 4;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.net-hint .asterisk {
+  font-size: 26px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+@media (max-width: 1000px) {
+  .intro .decrypt-heading {
+    font-size: 43px;
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 650px) {
+  .intro .decrypt-heading {
+    font-size: clamp(31px, 7vw, 43px);
+    margin-bottom: 42px;
+  }
+  .intro .decrypt-name {
+    font-size: 1.27em;
+  }
+  .net-hint {
+    top: -33px;
+    right: 0;
+    font-size: 12px;
+  }
+  .net-hint .asterisk {
+    font-size: 22px;
+  }
+}
+/* Two fixed-height, viewport-sized compositions. */
+body[data-view="home"],
+body[data-view="work"] {
+  height: 100dvh;
+  overflow: hidden;
+}
+body[data-view="home"] header,
+body[data-view="work"] header {
+  height: 64px;
+  margin: 18px 5.2vw;
+}
+body[data-view="home"] main {
+  height: calc(100dvh - 100px);
+}
+body[data-view="home"] .composition {
+  height: 100%;
+  min-height: 0;
+  margin: 0 5.2vw;
+  position: relative;
+}
+body[data-view="home"] .intro {
+  position: absolute;
+  left: 0;
+  top: 4%;
+  width: 50%;
+  min-height: 0;
+  padding: 25px 30px 30px;
+}
+body[data-view="home"] .intro .decrypt-heading {
+  font-size: clamp(35px, 4vw, 62px);
+  margin: 5px 0 35px;
+}
+body[data-view="home"] .intro p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+body[data-view="home"] .quick {
+  position: absolute;
+  left: 0;
+  margin: 0;
+}
+body[data-view="home"] .quick > p {
+  font-size: 23px;
+  margin: 14px 0;
+}
+body[data-view="home"] .quick dl {
+  margin: 12px 0 15px;
+}
+body[data-view="home"] .net-panel {
+  margin: 0;
+}
+body[data-view="home"] .net-hint {
+  line-height: 1.5;
+  margin: 0;
+  font-size: 13px;
+  background: var(--page-background, #fdfefd);
+  padding: 0 6px;
+}
+body[data-view="work"] .collection {
+  height: calc(100dvh - 100px);
+  margin: 0 5.2vw;
+  padding: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+body[data-view="work"] .collection-heading {
+  flex: none;
+}
+body[data-view="work"] .collection-heading h1 {
+  font-size: clamp(26px, 3vw, 40px);
+  margin: 6px 0 8px;
+}
+body[data-view="work"] .domain-key {
+  flex: none;
+  margin: 8px 0 0;
+  position: relative;
+  z-index: 4;
+}
+body[data-view="work"] .collection-net {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+body[data-view="work"] .collection-net #net {
+  left: -6%;
+  top: -21%;
+  width: 112%;
+  height: 129%;
+}
+body[data-view="work"] #fish-links {
+  position: absolute;
+  left: -6%;
+  top: -21%;
+  width: 112%;
+  height: 129%;
+  pointer-events: none;
+}
+@media (max-height: 780px) and (min-width: 651px) {
+  body[data-view="home"] .intro {
+    padding: 20px 25px;
+  }
+  body[data-view="home"] .intro .decrypt-heading {
+    font-size: clamp(33px, 3.6vw, 51px);
+    margin-bottom: 22px;
+  }
+  body[data-view="home"] .quick > p {
+    font-size: 19px;
+    margin: 9px 0;
+  }
+  body[data-view="home"] .quick dl {
+    margin: 8px 0;
+  }
+  body[data-view="home"] .quick dl > div {
+    padding: 5px 0;
+  }
+  body[data-view="home"] .intro p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 650px) {
+  body[data-view="home"] header,
+  body[data-view="work"] header {
+    height: 48px;
+    margin: 12px 20px;
+  }
+  body[data-view="home"] main,
+  body[data-view="work"] .collection {
+    height: calc(100dvh - 72px);
+  }
+  body[data-view="home"] .composition {
+    margin: 0 20px;
+    display: block;
+  }
+  body[data-view="home"] .intro {
+    top: 2%;
+    width: 100%;
+    padding: 13px 18px;
+  }
+  body[data-view="home"] .intro .decrypt-heading {
+    font-size: clamp(27px, 6vw, 37px);
+    margin: 0 0 15px;
+    line-height: 1.05;
+  }
+  body[data-view="home"] .intro .decrypt-name {
+    margin-top: 5px;
+  }
+  body[data-view="home"] .intro p {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+  body[data-view="home"] .quick {
+    display: none;
+  }
+  body[data-view="home"] .net-panel {
+    margin: 0;
+  }
+  body[data-view="home"] .net-hint {
+    font-size: 11px;
+  }
+  body[data-view="work"] .collection {
+    margin: 0 20px;
+    padding-top: 12px;
+  }
+  body[data-view="work"] .collection-heading h1 {
+    font-size: 26px;
+  }
+  .domain-key {
+    gap: 8px;
+  }
+  body[data-view="work"] .domain-key {
+    font-size: 10px;
+    gap: 8px;
+  }
+  body[data-view="work"] .fish-label {
+    font-size: 11px;
+    max-width: 115px;
+  }
+  .fish-label small {
+    font-size: 9px;
+  }
+}
+/* Separate the home hint from the larger, lower hanging net. */
+body[data-view="home"] .net-panel {
+  width: 69%;
+}
+body[data-view="home"] #net {
+  left: -4%;
+  width: 110%;
+}
+body[data-view="home"] .net-hint {
+  transform: translateY(-50%);
+  z-index: 5;
+}
+/* Collection mesh uses a uniform internal scale instead of stretching to its box. */
+body[data-view="work"] .collection-net #net,
+body[data-view="work"] #fish-links {
+  left: -8%;
+  top: -15%;
+  width: 116%;
+  height: 127%;
+}
+@media (max-height: 780px) and (min-width: 651px) {
+}
+@media (max-width: 650px) {
+  body[data-view="home"] .net-panel {
+    width: 114%;
+  }
+  body[data-view="home"] #net {
+    left: -3%;
+    width: 106%;
+  }
+  body[data-view="home"] .net-hint {
+    right: 9%;
+    transform: none;
+  }
+  body[data-view="work"] .collection-net #net,
+  body[data-view="work"] #fish-links {
+    left: -14%;
+    top: -8%;
+    width: 128%;
+    height: 114%;
+  }
+}
+/* Raise the hanging net to keep its hem and silhouette in view. */
+body[data-view="home"] .net-panel {
+  top: 5%;
+  height: 93%;
+  right: -5%;
+}
+body[data-view="home"] #net {
+  top: -7%;
+  height: 111%;
+}
+body[data-view="home"] .net-hint {
+  top: -1%;
+  right: 9%;
+}
+body[data-view="home"] .intro .decrypt-name {
+  font-size: 100px;
+}
+body[data-view="home"] .intro .sea-quote {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.55;
+}
+body[data-view="home"] .quick {
+  width: 34%;
+  padding: 22px 25px;
+  bottom: 20%;
+}
+body[data-view="home"] .quick .about-copy {
+  font-family: "Kanit", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 300;
+  margin: 15px 0 0;
+}
+@media (max-height: 780px) and (min-width: 651px) {
+  body[data-view="home"] .quick {
+    bottom: 5%;
+    padding: 16px 22px;
+  }
+  body[data-view="home"] .quick .about-copy {
+    font-size: 14px;
+    line-height: 1.45;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 650px) {
+  body[data-view="home"] .intro .decrypt-name {
+    font-size: 1.4em;
+  }
+  body[data-view="home"] .intro .sea-quote {
+    font-size: 13px;
+  }
+  body[data-view="home"] .net-panel {
+    top: 37%;
+    height: 62%;
+    right: -5%;
+  }
+  body[data-view="home"] .net-hint {
+    top: -18px;
+  }
+  body[data-view="home"] #net {
+    top: -8%;
+    height: 110%;
+  }
+}

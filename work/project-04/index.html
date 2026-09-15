@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Athena Zeng's portfolio — art, games, and interactive worlds."
+    />
+    <title>Garden of Words — Athena Zeng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/custom.css" />
+  </head>
+  <body data-view="detail">
+    <header>
+      <a class="home" href="/" aria-label="Homepage">AZ<span> / homepage</span></a
+      ><a class="menu" href="/work/" aria-label="Work">work</a>
+    </header>
+    <main class="project-screen">
+      <nav class="catch-rail" aria-label="Choose a project">
+        <a class="back-collection" href="/work/">← All works</a>
+        <div id="catch-list"></div>
+      </nav>
+      <section class="project-orbit" aria-label="Project information" tabindex="0">
+        <div class="orbit-line" aria-hidden="true"></div>
+        <div class="project-top">
+          <span id="project-category"></span><span id="project-number"></span>
+        </div>
+        <div id="orbit-cards" aria-live="polite"></div>
+      </section>
+    </main>
+    <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+      <filter id="fish-cutout" color-interpolation-filters="sRGB">
+        <feColorMatrix
+          in="SourceGraphic"
+          type="matrix"
+          values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  -20 -20 -20 0 57"
+          result="fish-mask"
+        />
+        <feComposite in="SourceGraphic" in2="fish-mask" operator="in" />
+      </filter>
+      <filter id="fish-silhouette" color-interpolation-filters="sRGB">
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 .39  0 0 0 0 .55  0 0 0 0 .68  -3 -3 -3 0 8.4"
+        />
+      </filter>
+    </svg>
+    <script src="/data/projects.js"></script>
+    <script src="/assets/js/portfolio.js"></script>
+  </body>
+</html>
